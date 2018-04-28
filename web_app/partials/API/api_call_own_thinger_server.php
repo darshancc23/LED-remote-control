@@ -2,14 +2,14 @@
 
 include ('../connectivity/conn.php'); //Including connectivity file
  
-$id=$_GET['id'];
+$id=$_GET['id']; //Gets the user id from the database
 $result = mysqli_query($con, "SELECT distinct devicecredentials.resource,devicecredentials.auth,devicecredentials.did from devicecredentials WHERE devicecredentials.Dev_Id=$id" ) or die("Query fail :" .mysqli_error());
 $row = mysqli_fetch_array($result);
-$device = $row['did'];
+$device = $row['did']; //Gets the device id from the database 
 $user = 'username'; // Thinger username
-$resource = $row['resource']; 
-$authorization = $row['auth'];
-$state = ($_GET['state']=='true')?true:false;
+$resource = $row['resource']; //Gets the device name from the database
+$authorization = $row['auth']; //Gets the authorization token from the database
+$state = ($_GET['state']=='true')?true:false; //Gets the state of the resource (Either ON or OFF )
 $host = server_ip_address // IP address of the server where Thinger is hosted
 
 $url = "http://{$host}/v2/users/{$user}/devices/{$device}/{$resource}?authorization={$authorization}";
