@@ -1,1 +1,1 @@
-This folder contains the database connectivity.
+This folder contains the MySQL database connectivity.
