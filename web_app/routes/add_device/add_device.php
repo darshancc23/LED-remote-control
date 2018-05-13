@@ -1,5 +1,5 @@
 <?php 
-include '../../partials/connectivity/conn.php';
+include '../../partials/connectivity/connectivity.php';
 session_start();
 $email=$_SESSION['email'];
 $result = mysqli_query($con, "SELECT login.id from login where login.email='$email'") or die("Query fail :" .mysqli_error());
@@ -16,7 +16,6 @@ if (!mysqli_query($con,$sql))
   die('Error: ' . mysqli_error($con));
   }
 mysqli_close($con);
-echo"yayy";
-header('location:../rooms/room.php')
+header('location:../room_manager/room.php')
 
 ?>

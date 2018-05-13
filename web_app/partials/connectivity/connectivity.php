@@ -2,7 +2,7 @@
 $server = "server_ip_address"; //Host IP os Server IP address of MySQL server
 $username = "username"; //Username of MySQL server
 $password = "password"; //Password of MySQL server
-$database = "database"; //Name of the database in the MySQL server
+$database = "ledrc"; //Name of the database in the MySQL server
 
 $con = mysqli_connect($server,$username,$password,$database);
 if(! $con)

@@ -2,7 +2,7 @@
     <html lang="en" >
     <head>
     <meta charset="UTF-8">
-    <title>STT Login</title>
+    <title>Device Manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"><link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -76,16 +76,12 @@ input:checked + .slider:before {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">StarTechTroopers</a>
+      <a class="navbar-brand" href="#">LRC</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="../schedule/index.php">Scheduling</a></li>
-        <li><a href="../analytics/index1.php">Analytics</a></li>
+        <!--<li><a href="../schedule/index.php">Scheduling</a></li>-->
         <li><a href="../../routes/rooms/room.php">Rooms</a></li>
-        <li><a href="../../routes/presets/index.html">Presets</a></li>
-        <li><a href="#">Settings</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="../../routes/login/logout.php"><span class="glyphicon glyphicon-user"></span>  Logout</a></li>
@@ -96,7 +92,7 @@ input:checked + .slider:before {
 </nav>
 </body>
 <?php 
-	include ('../../partials/connectivity/conn.php');
+	include ('../../partials/connectivity/connectivity.php');
 	session_start();
 	if (isset($_SESSION['email'])) {
 			
@@ -163,7 +159,7 @@ input:checked + .slider:before {
 	function post_api(id, pass) {
   var xhttp;
   xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "../../partials/button/api_call.php?state="+pass+"&id="+id, true);
+  xhttp.open("POST", "../../partials/api_calls/api_call_own_thinger_server.php?state="+pass+"&id="+id, true);
   xhttp.send();   
   }
 

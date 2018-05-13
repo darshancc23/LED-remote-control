@@ -9,14 +9,11 @@
     <link rel="stylesheet" href="styles/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-        
-    </style>
     </head>
     <body>
         <div class="user">
             <header class="user__header">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="LRC logo" />
             <h1 class="user__title">Welcome to LRC</h1>
             </header>
 
@@ -34,7 +31,7 @@
             </form>
 
             <form class="for1">
-            <input class="btn btn-4" type="button" value="Sign up" onclick="window.location.href='routes/register/register.html'"/>
+            <input class="btn btn-4" type="button" value="Sign up" onclick="window.location.href='routes/registration/register.html'"/>
             </form>
 
             </form>
@@ -50,14 +47,14 @@
         document.getElementById('username').value='$email';
         document.getElementById('password').value='$pass';
         </script>";
-        //header("location:../rooms/room.php");
+        header("location:routes/room_manager/room.php");
         }
     ?>
     
 
        
         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-        <script  src="../../styles/js/index.js"></script>
+        <script  src="styles/js/index.js"></script>
     </body>
     </html>
 
