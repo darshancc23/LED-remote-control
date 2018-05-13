@@ -1,5 +1,5 @@
 <?php
-include('../../partials/connectivity/conn.php');
+include('../../partials/connectivity/connectivity.php');
 if(isset($_POST['submit'])){
         $email=$_POST['username'];
         $pass=hash('sha256',$_POST['password']);
@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
         if($email==$row['email'] and $pass==$row['password']){
             setcookie('email',$email,time()+60*60*24*7);
             setcookie('password',$pass,time()+60*60*24*7);
-            header("location:../rooms/room.php");
+            header("location:../room_manager/room.php");
             session_start();
          $_SESSION['email']=$email;
         

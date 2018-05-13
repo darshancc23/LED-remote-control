@@ -1,5 +1,5 @@
 <?php
-include('../../partials/connectivity/conn.php');
+include('../../partials/connectivity/connectivity.php');
 if($_POST['password']==$_POST['password2']){
 
   $pass=hash('sha256',$_POST['password']);
