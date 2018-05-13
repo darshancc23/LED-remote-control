@@ -1,2 +1,11 @@
-# LED-remote-control
-Control LEDs or bulbs over the internet using NodeMCU and the Thinger platform.
+# LED Remote Control
+
+Control LEDs or bulbs over the internet using a NodeMCU and the Thinger platform.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+[Thinger](https://thinger.io)
